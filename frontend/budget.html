@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head><title> Budget and savings </title>
+    <link rel="stylesheet"href="budget.css></head>
+    <body>
+        <div class="container">
+            <h1>Budget and goal savings planner</h1>
+            <div class="card">
+                <h2>Set monthly budget</h2>
+                <input type="number" id="budgetamt"placeholder="enter monthly budget">
+                <input type="number"id="current"placeholder="enter current spending">
+                <button onclick="calculateBudget()">Check budget</button>
+                <p id="budgetres"></p>
+                <div class="progress-bar">
+                    <div id="budgetprog"></div>
+                    </div>
+
+
+            </div>
+            <div class="card">
+                <h2>Set savings goal</h2>
+                <input type="number"id="goalamt"placeholder="enter savings goal">
+                <input type="number"id="savedamt"placeholder="enter saved amount">
+                <button onclick="calculategoal()">Track goal</button>
+                <p id="goalres"></p>
+                <div class = "progress-bar">
+                    <div id="goalprog"></div>
+                </div>
+            </div>
+        </div>
+        <script src="budget.js"></script>
+    </body>
+</html>
