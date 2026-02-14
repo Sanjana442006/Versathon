@@ -14,11 +14,29 @@ a{
     display: block;
     margin: 20px;
 }
+
+.main{
+    flex: 1;
+}
 .card{
     width: 35%;
+    padding: 20px;
+    border-radius: 6px;
+    gap: 30px;
+    margin-left: 15px;
 
 }
 .cards{
   display: flex;
   justify-content: space-between;
+  margin-top: 10px;
+}
+.income{
+  background-color:#2ecc71;
+}
+.expense{
+  background-color:#e74c3c;
+}
+.balance{
+ background-color:#3498db;
 }
