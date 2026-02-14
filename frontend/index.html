@@ -11,10 +11,12 @@
     <h1>
         Dashboard
     </h1>
-    <a>Dashboard</a>
-    <a>Budget & Goals</a>
-    <a>Tax Planner</a>
+    <a href="index.html">Dashboard</a>
+    <a href="budget.html">Budget & Goals</a>
+    <a href="tax.html">Tax Planner</a>
   </div >
+
+  
   <div class="main">
    <h1>Financial Overview</h1>
     
@@ -31,18 +33,18 @@
     <h1>Net Balance</h1>
     <p>₹0</p>
    </div>
-  
+  </div>
 
    <div class="finance">
     <h2>
      Add Financial Entry
     </h2>
-    <select>
-        <option>Income</option>
-        <option>Expense</option>
+    <select id="type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
     </select>
-    <input type="number" placeholder="Enter Amount">
-    <input type="text" placeholder="category">
+    <input type="number" placeholder="Enter Amount" id="amt">
+    <input type="text" placeholder="category" id="catg">
     <button>add entry</button>
    </div>
   
