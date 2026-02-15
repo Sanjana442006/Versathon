@@ -1,18 +1,22 @@
 FinTrack
+
 Team: Tech Titans
-Overview
+Overview:
 FinTrack is a front-end financial management web application that helps users track income, expenses, budgets, savings goals, and tax calculations in one simple platform.
-Features
+
+Features:
 Financial dashboard with Total Income, Total Expenses, and Net Balance
 Income vs Expense analytics graph
 Monthly budget tracking
 Savings goal progress monitoring
 Tax calculator (Annual Income & Deductions)
-Tech Stack
+
+Tech Stack:
 HTML
 CSS
 JavaScript
-Future Scope
+
+Future Scope:
 Backend integration with database
 Secure authentication
 AI-based financial insights
