@@ -1,14 +1,11 @@
-
-
-
 function calculateBudget() {
-    let budget = parseFloat(document.getElementById("budgetAmount").value);
-    let spending = parseFloat(document.getElementById("currentSpending").value);
+    let budget = parseFloat(document.getElementById("budgetamt").value);
+    let spending = parseFloat(document.getElementById("current").value);
 
-    if (!budget || !spending) {
+    if (!budget || budget <= 0 || !spending || spending < 0) {
         alert("Please enter valid values");
-        return;}
-    
+        return;
+    }
 
     let percentage = (spending / budget) * 100;
     let resultText = "";
@@ -16,34 +13,31 @@ function calculateBudget() {
     if (spending > budget) {
         resultText = "You have exceeded your budget!";
     } else {
-        resultText = "You are within budget.";}
-    
+        resultText = "You are within budget.";
+    }
 
-    document.getElementById("budgetResult").innerText = resultText;
+    document.getElementById("budgetres").innerText = resultText;
 
-    let progress = document.getElementById("budgetProgress");
-    progress.style.width = percentage + "%";
+    let progress = document.getElementById("budgetprog");
+    progress.style.width = Math.min(percentage, 100) + "%";
     progress.style.backgroundColor = spending > budget ? "red" : "green";
-
-
-
-
 }
 
-function calculateGoal() {
-    let goal = parseFloat(document.getElementById("goalAmount").value);
-    let saved = parseFloat(document.getElementById("savedAmount").value);
+function calculategoal() {
+    let goal = parseFloat(document.getElementById("goalamt").value);
+    let saved = parseFloat(document.getElementById("savedamt").value);
 
-    if (!goal || !saved) {
+    if (!goal || goal <= 0 || !saved || saved < 0) {
         alert("Please enter valid values");
-        return;   }
-    
+        return;
+    }
 
     let percentage = (saved / goal) * 100;
-    document.getElementById("goalResult").innerText =
+
+    document.getElementById("goalres").innerText =
         "You have achieved " + percentage.toFixed(2) + "% of your goal.";
 
-    let progress = document.getElementById("goalProgress");
-    progress.style.width = percentage + "%";
+    let progress = document.getElementById("goalprog");
+    progress.style.width = Math.min(percentage, 100) + "%";
     progress.style.backgroundColor = "#3498db";
 }
