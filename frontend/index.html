@@ -5,54 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <div class="side_bar">
-    <h1>
-        Dashboard
-    </h1>
+
+<div class="side_bar">
+    <h1>Dashboard</h1>
     <a href="index.html">Dashboard</a>
     <a href="budget.html">Budget & Goals</a>
     <a href="tax.html">Tax Planner</a>
-  </div >
+</div>
 
-  
-  <div class="main">
-   <h1>Financial Overview</h1>
+<div class="main">
+    <h1>Financial Overview</h1>
     
     <div class="cards">
-   <div class="income card">
-    <h1>Total Income</h1>
-    <p>₹0</p>
-   </div>
-   <div class="expense card" >
-    <h1>total Expense</h1>
-    <p>₹0</p>
-   </div>
-   <div class="balance card">
-    <h1>Net Balance</h1>
-    <p>₹0</p>
-   </div>
-  </div>
+        <div class="income card">
+            <h2>Total Income</h2>
+            <p id="income">₹0</p>
+        </div>
 
-   <div class="finance">
-    <h2>
-     Add Financial Entry
-    </h2>
-    <select id="type">
-        <option value="income">Income</option>
-        <option value="expense">Expense</option>
-    </select>
-    <input type="number" placeholder="Enter Amount" id="amt">
-    <input type="text" placeholder="category" id="catg">
-    <button>add entry</button>
-   </div>
-  
+        <div class="expense card">
+            <h2>Total Expense</h2>
+            <p id="expense">₹0</p>
+        </div>
 
-   <div>
-    <h2>Analytics chart</h2>
-    <canvas id="chart"></canvas>
-   </div>
+        <div class="balance card">
+            <h2>Net Balance</h2>
+            <p id="balance">₹0</p>
+        </div>
+    </div>
+
+    <div class="finance">
+        <h2>Add Financial Entry</h2>
+
+        <select id="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+        </select>
+
+        <input type="number" placeholder="Enter Amount" id="amt">
+        <input type="text" placeholder="Category" id="catg">
+
+        <button onclick="addTrans()">Add Entry</button>
+    </div>
+
+    <div class="Finance-chart">
+        <h2>Income vs Expense Analytics</h2>
+        <canvas id="chart"></canvas>
+    </div>
 </div>
+<script src="script.js"></script>
+
 </body>
 </html>

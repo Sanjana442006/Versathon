@@ -1,15 +1,15 @@
 let income=0;
-let exp=0;
+let expense=0;
 
-const context = document.grtelementById('chart').getContext('2d');
-const chart=new chart( context, {
+const context = document.getElementById('chart').getContext('2d');
+const chart=new Chart( context, {
     type: 'bar',
     data: {
         labels: ['income','expense'],
         datasets: [{
             label: 'Financial overview', 
-            data:['income','expense'] ,
-            backgroundcolor:['#2ecc71','#e74c3c']
+            data:[income,expense] ,
+            backgroundColor:['#2ecc71','#e74c3c']
         }]
     }
 
@@ -24,12 +24,12 @@ function addTrans()
         alert("Enter valid amount");
     return ;
     }
-    if(type === amt){
+    if(type === "income"){
        income+=amt;
     }  
     else
     {
-        expense+=amount;
+        expense+=amt;
     }
     updateDashboard();
 
@@ -39,7 +39,7 @@ function updateDashboard()
     let bal=income-expense;
     document.getElementById('income').innerText="₹"+income;
     document.getElementById('expense').innerText="₹"+expense;
-    document.getElementById('balance').innerText="₹"+balance;
+    document.getElementById('balance').innerText="₹"+bal;
     
     chart.data.datasets[0].data=[income,expense];
     chart.update();
