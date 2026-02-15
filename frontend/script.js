@@ -19,6 +19,12 @@ function addTrans()
 {
     let type=document.getElementById("type").value;
     let amt=parseFloat(document.getElementById('amt').value);
+    let category = document.getElementById("catg").value;
+
+if(type === "expense" && category === ""){
+    alert("Please select a category");
+    return;
+}
 
     if(!amt || amt<=0){
         alert("Enter valid amount");
@@ -36,6 +42,8 @@ function addTrans()
 }
 function updateDashboard()
 {
+   
+
     let bal=income-expense;
     document.getElementById('income').innerText="₹"+income;
     document.getElementById('expense').innerText="₹"+expense;

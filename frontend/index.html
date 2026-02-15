@@ -37,7 +37,16 @@
             <option value="expense">Expense</option>
         </select>
         <input type="number" placeholder="Enter Amount" id="amt">
-        <input type="text" placeholder="Category" id="catg">
+        <select id="catg">
+    <option value="" disabled selected>Select Category</option>
+    <option value="Food">Food</option>
+    <option value="Rent">Rent</option>
+    <option value="Travel">Travel</option>
+    <option value="Shopping">Shopping</option>
+    <option value="Bills">Bills</option>
+    <option value="Investment">Investment</option>
+    <option value="Other">Other</option>
+</select>
         <button onclick="addTrans()">Add Entry</button>
     </div>
     <div class="Finance-chart">

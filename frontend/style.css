@@ -10,7 +10,7 @@ body {
     background-color: #1e2a38;
     color: white;
     width: 200px;
-    height: 100vh;
+    
 }
 
 .side_bar a {
@@ -33,7 +33,8 @@ body {
 .cards {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 40px;
+    gap: 10px;
 }
 
 .card {
